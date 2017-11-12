@@ -17,10 +17,10 @@ class App extends Component {
             <div className="App">
                 <Header/>
                 <Switch>
-                    <Route path="/data_sources" component={DataSources}/>
-                    <Route path="/conflicts" component={Conflicts}/>
-                    <Route path="/simulator" component={Simulator}/>
-                    <Route path="/settings" component={Settings}/>
+                    <Route path="/ui/data_sources" component={DataSources}/>
+                    <Route path="/ui/conflicts" component={Conflicts}/>
+                    <Route path="/ui/simulator" component={Simulator}/>
+                    <Route path="/ui/settings" component={Settings}/>
                     <Route path="/" component={RootPage}/>
                     <Route component={NotFound}/>
                 </Switch>

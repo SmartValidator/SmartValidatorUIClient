@@ -22,26 +22,26 @@ export default class Header extends React.Component {
         return (
             <div>
                 <Navbar color="faded" light expand="md">
-                    <NavbarBrand href="/">
+                    <NavbarBrand href="/ui/">
                         <h3><T.span text={{key: "platform.name"}}/></h3>
                     </NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/data_sources">Data sources</NavLink>
+                                <NavLink href="/ui/data_sources">Data sources</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/conflicts">
+                                <NavLink href="/ui/conflicts">
                                     Conflicts
                                     <span className="badge badge-info">42</span>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/simulator">Simulator</NavLink>
+                                <NavLink href="/ui/simulator">Simulator</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/settings">Settings</NavLink>
+                                <NavLink href="/ui/settings">Settings</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

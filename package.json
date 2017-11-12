@@ -2,6 +2,7 @@
   "name": "svui",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://smart-validator.net/ui",
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "i18n-react": "^0.6.2",
