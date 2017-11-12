@@ -9,7 +9,10 @@ class Footer extends React.Component {
                 <footer className="Footer">
                     <hr/>
                     <Row>
-                        <Col className="text-right text-muted small">This is the footer.</Col>
+                        <Col xs="6" className="text-muted small">
+                            <a href="https://github.com/naturtrunken/SmartValidatorUI">https://github.com/naturtrunken/SmartValidatorUI</a>
+                        </Col>
+                        <Col xs="6" className="text-right text-muted small">This is the footer.</Col>
                     </Row>
                 </footer>
             </Container>
