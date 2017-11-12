@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'MontserratSemiBold';
+    font-weight: 500;
+    src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'MontserratSemiBold', sans-serif;
+}
+
+.container {
+    margin-top: 2em;
+}
+

@@ -1,18 +1,33 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './style.css';
 import Header from '../Header';
+import Footer from '../Footer';
+import {Route, Switch} from 'react-router-dom';
+
+import RootPage from '../RootPage';
+import Conflicts from '../Conflicts';
+import DataSources from '../DataSources';
+import Simulator from '../Simulator';
+import Settings from '../Settings';
+import NotFound from '../NotFound';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <header className="App-header">
-          <h1 className="App-title">Welcome</h1>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Header/>
+                <Switch>
+                    <Route path="/data_sources" component={DataSources}/>
+                    <Route path="/conflicts" component={Conflicts}/>
+                    <Route path="/simulator" component={Simulator}/>
+                    <Route path="/settings" component={Settings}/>
+                    <Route path="/" component={RootPage}/>
+                    <Route component={NotFound}/>
+                </Switch>
+                <Footer/>
+            </div>
+        );
+    }
 }
 
 export default App;
