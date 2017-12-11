@@ -1,0 +1,6 @@
+.nav .nav-link {
+    border-bottom: 1px solid #ddd;
+}
+.nav .nav-link:last-child {
+    border: none;
+}

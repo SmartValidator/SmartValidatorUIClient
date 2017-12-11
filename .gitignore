@@ -22,3 +22,5 @@ yarn-error.log*
 
 # JetBrain/RM IDE files.
 .idea
+
+/tmp
