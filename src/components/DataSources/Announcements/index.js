@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import '../../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
+let config = require('../../../config');
 
 class Announcements extends React.Component {
 
@@ -24,7 +25,7 @@ class Announcements extends React.Component {
     }
 
     fetchData(page = this.state.page, sizePerPage = this.state.sizePerPage) {
-        fetch('http://localhost:8080/v1/announcements')
+        fetch(config.api_host + '/v1/announcements')
             .then(response => response.json()) // This transforms the response to JSON and stores it in the same variable.
             .then(response => this.setState({items: response.announcements, totalSize: response.total, page, sizePerPage}));
     }

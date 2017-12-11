@@ -3,6 +3,7 @@ import './style.css';
 import { Container, Row, Col, Alert } from 'reactstrap';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
+let config = require('../../config');
 
 class Conflicts extends React.Component {
 
@@ -26,7 +27,7 @@ class Conflicts extends React.Component {
     }
 
     fetchData(page = this.state.page, sizePerPage = this.state.sizePerPage) {
-        fetch('http://localhost:8080/v1/conflicts/1')
+        fetch(config.api_host + '/v1/conflicts/1')
             .then(response => response.json()) // This transforms the response to JSON and stores it in the same variable.
             .then(response => this.setState({items: response.announcements, totalSize: response.total, page, sizePerPage}));
     }
